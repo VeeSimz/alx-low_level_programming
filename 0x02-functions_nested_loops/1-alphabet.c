@@ -2,8 +2,8 @@
 #include <unistd.h>
 /**
  * print_alphabet - entry point to the program
- *
- * Return: always 0
+ * _putchar - outputs the value of  variable alph
+ * Return: always 0 (Success)
  */
 void print_alphabet(void)
 {
