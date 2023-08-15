@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * main - Entry point into the program
+ * main - entry point to the program
  *
  * Return: always 0
  */
 int main(void)
 {
-	printf("_putchar\n");
+	printf("-putchar\n");
 	return (0);
 }
