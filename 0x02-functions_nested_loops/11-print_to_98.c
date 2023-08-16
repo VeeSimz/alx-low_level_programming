@@ -3,19 +3,19 @@
 /**
  * print_to_98 - prints numbers from 0 to 98
  *
- * @j: first number
+ * @n: first number
  *
  * Return: nothing
  */
-void print_to_98(int j)
+void print_to_98(int n)
 {
-	if (j <= 98)
+	if (n <= 98)
 	{
-		for (j = 0; j <= 97; j++)
-			printf("%d, ", j);
+		for (n = 0; n <= 97; n++)
+			printf("%d, ", n);
 	}
 	else
-		for (j = 0; j > 98; j--)
-			printf("%d, ", j);
+		for (n = 0; n > 98; n--)
+			printf("%d, ", n);
 	printf("98\n");
 }
