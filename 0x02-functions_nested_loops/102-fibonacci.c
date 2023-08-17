@@ -10,8 +10,14 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
-		n = j + i;
-		printf("%d\n", k);
+		if (j != 20365011074)
+		{
+			printf("%d, ", j);
+		} else
+		{
+			printf("%d\n", j);
+		}
+		n = j + k;
 		j = k;
 		k = n;
 	}
