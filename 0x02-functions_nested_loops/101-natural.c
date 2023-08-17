@@ -6,8 +6,12 @@
  */
 int main(void)
 {
-	unsigned long int times3, times5, sum = 0;
+	unsigned long int times3, times5, sum;
 	int i;
+
+	times3 = 0;
+	times5 = 0;
+	sum = 0;
 
 	for (i = 0; i < 1024; i++)
 	{
