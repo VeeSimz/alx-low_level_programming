@@ -6,16 +6,19 @@
  */
 int main(void)
 {
-	int i = 1, j = 2, k, n;
+	long int i, j, k, n;
+
+	j = 1;
+	k = 2;
 
 	for (i = 1; i <= 50; i++)
 	{
 		if (j != 20365011074)
 		{
-			printf("%d, ", j);
+			printf("%ld, ", j);
 		} else
 		{
-			printf("%d\n", j);
+			printf("%ld\n", j);
 		}
 		n = j + k;
 		j = k;
