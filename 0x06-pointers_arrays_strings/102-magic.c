@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main - entry point to the program
- * Return: always 0
- */
-
+/* main - program that prints and Return: always 0 */
 int main(void)
 {
 	  int n;
