@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * strlen - returns the length of a string
+ * _strlen - returns the length of a string
  * @s: string
  * Return: length of string
  */
@@ -19,7 +19,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * strcpy - copies a string to the buffer
+ * _strcpy - copies a string to the buffer
  * @dest: destination
  * @src: source
  * Return: pointer to dest
