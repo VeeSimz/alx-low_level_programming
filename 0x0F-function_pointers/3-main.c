@@ -1,4 +1,4 @@
-#include "clate.h"
+#include "3-calc.h"
 
 /**
  * main - calculator operations
@@ -6,7 +6,7 @@
  * @argv: argument vector
  * Return: 0
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int i, j;
 	char *op;
@@ -20,7 +20,7 @@ int main(int argc, char *argv)
 	op = argv[2];
 	j = atoi(argv[3]);
 
-	if (get_op_func(op) == NULL || op[1] != '\0'
+	if (get_op_func(op) == NULL || op[1] != '\0')
 			{
 			printf("Error\n");
 			exit(99);
