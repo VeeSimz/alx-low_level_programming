@@ -21,10 +21,10 @@ int main(int argc, char *argv[])
 	j = atoi(argv[3]);
 
 	if (get_op_func(op) == NULL || op[1] != '\0')
-			{
-			printf("Error\n");
-			exit(99);
-			}
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	if ((*op == '/' && j == 0) || (*op == '%' && j == 0))
 		{
 		printf("Error\n");
