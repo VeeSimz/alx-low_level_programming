@@ -11,12 +11,13 @@ int pop_listint(listint_t **head)
 	listint_t *temp;
 
 	if (*head == NULL)
-		printf("List is already empty");
+		return (1);
 	else
 	{
 		temp = *head;
 		*head = (*head)->next;
 		free(temp);
+		temp = NULL;
 	}
 	return (0);
 }
