@@ -72,7 +72,7 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file(int a) - closes files
+ * close_file - closes files
  * @a: file to be closed
  * Return: void
  */
