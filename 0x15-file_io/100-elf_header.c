@@ -1,5 +1,10 @@
-#include "main.h"
 #include <elf.h>
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
@@ -76,6 +81,12 @@ void print_class(unsigned char *e_ident)
 				printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 												}
 }
+
+/**
+ * print_data - prints data
+ * @e_ident: array containing ELF version
+ * Return: void
+ */
 
 void print_data(unsigned char *e_ident)
 {
@@ -252,14 +263,14 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	o = open(argv[1], O_RDONLY);
 	if (o == -1)
 	{
-		printf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
 		close_elf(o);
-		printf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
 	r = read(o, header, sizeof(Elf64_Ehdr));
@@ -280,7 +291,9 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_abi(header->e_ident);
 	print_type(header->e_type, header->e_ident);
 	print_entry(header->e_entry, header->e_ident);
+
 	free(header);
 	close_elf(o);
+
 	return (0);
 }
